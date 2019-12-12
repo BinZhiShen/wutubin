@@ -1,0 +1,10 @@
+const path = require('path')
+
+let res = path.join('foo')
+console.log(res)
+res = path.join('foo','/bar')
+console.log(res)
+res = path.join('foo','/bar','..')
+console.log(res)
+res = path.join('foo','/bar','..','/')
+console.log(res)
