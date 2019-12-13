@@ -1,0 +1,1 @@
+> Java教程是为JDK 8编写的。本页中描述的示例和实践并没有利用后续版本中引入的改进，而且可能会使用不再可用的技术。有关所有JDK版本的新特性、增强、已删除或废弃选项的信息，请参阅[JDK发行说明](https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html)。
