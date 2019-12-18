@@ -5,7 +5,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: './package/test'
+        use: ['./package/test1','./package/test2','./package/test3']
       }
     ]
   }
