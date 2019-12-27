@@ -21,12 +21,12 @@ git [--version] [--help] [-C <path>] [-c <name>=<value>]
 ## 选项
 `--version`
 > 打印Git程序的Git套件版本。
-> ![](./img/git/--version.png)
+> ![](../img/git/--version.png)
 
 `--help`
 > 打印概要和最常用命令的列表。如果提供了all或-a选项，则打印所有可用命令。如果Git命令被命名，这个选项将打开该命令的手册页面。
-![](./img/git/--help.png)
-![](./img/git/--help-a.png)
+![](../img/git/--help.png)
+![](../img/git/--help-a.png)
 
 > 打开一个add命令手册
 ```gig
@@ -41,7 +41,7 @@ git --git-dir=a.git --work-tree=b -C c status
 git --git-dir=c/a.git --work-tree=c/b status
 ```
 > git -C \<other-git-repo-path> [git-command] 指定其它路径的仓库 执行命令
-![](./img/git/-C&#32;path.png)  
+![](../img/git/-C&#32;path.png)  
 
 `-c <name>=<value>`
 > 将配置参数传递给命令。给定的值将覆盖配置文件中的值。\<name>的格式应该与git配置中列出的格式相同(子键由点分隔)。
@@ -54,12 +54,61 @@ git -c bare=false status
 ```
 `--exec-path[=<path>]`
 > 安装核心Git程序的路径。这也可以通过设置GIT EXEC PATH环境变量来控制。如果没有给出路径，git将打印当前设置，然后退出。
-![](img/git/--exec-path.png)
+![](../img/git/--exec-path.png)
 
 `--html-path`
 > 打印Git的HTML文档安装并退出的路径，不带斜杠。
-![](img/git/--html-path.png)
+![](../img/git/--html-path.png)
 
 `--man-path`
 > 打印此版本git的手册所在路径并退出
-![](img/git/--man-path.png)
+![](../img/git/--man-path.png)
+
+`--info-path`
+> 打印记录Git版本的信息文件所在的路径并退出。
+![](../img/git/--info-path.png)
+
+`-p`  
+`--paginate`
+> 如果标准输出是终端, 则将所有输出管道更少（或如果设置为$ PAGER）, 这将覆盖pager.<cmd> 配置选项。
+
+> 简单的说，就是以终端大小进行分页。
+
+`--no-pager`
+> 不要将Git输出管道传输到寻呼机
+
+> 就是不分页，一次性打印
+
+`--git-dir=<path>`
+> 设置存储库的路径, 可以通过设置GIT_DIR环境变量来控制, 可以是当前工作目录的绝对或相对路径
+
+`--work-tree=<path>`
+> 设置工作树的路径。它可以是相对于当前工作目录的绝对路径或路径。这也可以通过设置GIT_WORK_TREE环境变量和core.worktree配置变量来控制（参见git-config（1）中的core.worktree 进行更详细的讨论）。
+
+`--namespace=<path>`
+> 设置Git命名空间。有关详细信息，请参阅gitnamespaces（7）。相当于设置GIT_NAMESPACE环境变量。
+
+`--super-prefix=<path>`
+> 目前仅供内部使用。设置一个前缀，该前缀从存储库上方到根的路径。一个用途是给调用它的超级项目的子模块上下文。
+
+`--bare`
+> 将存储库视为裸机箱。如果GIT_DIR环境未设置，则将其设置为当前工作目录。
+
+`--no-replace-objects`
+> 不要使用替换参考来替换Git对象。有关详细信息，请参阅 git-replace（1）。
+
+`--literal-pathspecs`
+> 以字面意思来对待路径（即没有全局，没有pathspec的魔法）。这相当于将GIT_LITERAL_PATHSPECS环境变量设置为1。
+
+`--glob-pathspecs`
+> 添加“glob”魔术到所有路径。这相当于将GIT_GLOB_PATHSPECS环境变量设置为1。禁用各个路径上的globbing可以使用pathspec magic“：（literal）”
+
+`--noglob-pathspecs`
+> 为所有路径添加“文字”魔法。这相当于将GIT_NOGLOB_PATHSPECS环境变量设置为1。在各个路径上启用globbing可以使用pathspec magic“：（glob）”
+
+`--icase-pathspecs`
+> 向所有路径添加“icase”魔术。这相当于将GIT_ICASE_PATHSPECS环境变量设置为1
+
+`--no-optional-locks`
+不要执行需要锁的可选操作。这相当于将GIT可选锁设置为0。
+
