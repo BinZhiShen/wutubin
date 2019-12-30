@@ -1,7 +1,7 @@
 
 **/node_modules/
 **/dist/
-
+test/.git
 # Editor directories and files
 
 # .vscode
