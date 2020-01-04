@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas')  
+    const ctx = canvas.getContext('2d')  
+    ctx.beginPath()  
+    ctx.moveTo(10, 10)  
+    ctx.lineTo(10, 50)  
+    ctx.lineTo(50, 50)  
+    ctx.lineTo(50, 10)  
+    ctx.fillStyle= 'black'  
+    ctx.fill()  
+    ctx.closePath()  
+    canvas.addEventListener('click', function (e) {   
+       const canvasInfo = canvas.getBoundingClientRect()    
+       console.log(ctx.isPointInPath(e.clientX - canvasInfo.left, e.clientY - canvasInfo.top))  })
+  </script>
+</body>
+</html>
