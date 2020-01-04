@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-git learning
-=======
 - [语法](#%e8%af%ad%e6%b3%95)
   - [生成目录](#%e7%94%9f%e6%88%90%e7%9b%ae%e5%bd%95)
   - [空格缩进](#%e7%a9%ba%e6%a0%bc%e7%bc%a9%e8%bf%9b)
@@ -25,4 +22,3 @@ git learning
 > 不换行空格:&nbsp;`&nbsp;`  
 > 半角空格:&ensp;`&ensp;`  
 > 全角空格:&emsp;`&emsp;` 
->>>>>>> markdown
