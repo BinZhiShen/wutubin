@@ -1,5 +1,5 @@
 const path = require('path')
-
+require('../../fs/example/fs.state')
 let res = path.join('foo')
 console.log(res)
 res = path.join('foo','/bar')
@@ -7,4 +7,4 @@ console.log(res)
 res = path.join('foo','/bar','..')
 console.log(res)
 res = path.join('foo','/bar','..','/')
-console.log(res)
+console.log(res,__dirname)
