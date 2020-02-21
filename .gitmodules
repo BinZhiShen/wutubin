@@ -1,3 +1,4 @@
 [submodule "git"]
 	path = git
 	url = git@BinZhiShen:BinZhiShen/git.git
+	branch = dev
